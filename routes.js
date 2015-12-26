@@ -12,6 +12,14 @@ Router.route('/news', function () {
   this.render('news');
 });
 
+Router.route('/blog', function () {
+  this.render('blogPage');
+});
+
 Router.route('/projects', function () {
   this.render('projects');
+});
+
+Router.route('/about', function () {
+  this.render('about');
 });

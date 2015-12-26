@@ -1,18 +1,16 @@
-<template name="projects">
+<template name="show">
   <div class="container">
 
     <ol class="breadcrumb">
       <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>
         Home</a>
       </li>
-      <li class="active">Projects</li>
+      <li><a href="{{blogPathFor "blogIndex"}}">Blog</a></li>
+      <li class="active">Latest</li>
     </ol>
 
     <div class="row">
-      <h1>Projects Page</h1>
-      <p>
-        Lots of project stuff...
-      </p>
+      {{> blogShow }}  
     </div>
   </div>
 </template>
