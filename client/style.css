@@ -1,0 +1,14 @@
+/* Compensate for fixed navbar at top and bottom of page */
+
+body {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+/* navbar logo - trial and error. Changes when menu drops down */
+
+#logo {
+  padding-top: 5px;
+  padding-right: 10px;
+  height: 45px;
+}
