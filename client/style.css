@@ -13,3 +13,8 @@ body {
 .meteor-blog-admin .meteor-blog-admin-index h1 {
   margin-top: 20px;
 }
+
+.news-image {
+  height: 150px;
+  margin-right: 20px;
+}

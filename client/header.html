@@ -18,21 +18,16 @@
       <div id="site-navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li>
-            <a href="/projects">Projects</a>
-          </li>
-          <li>
             <a href="/news">News</a>
           </li>
           <li>
-            <a href="{{blogPathFor "blogIndex"}}">Blog</a>
+            <a href="{{blogPathFor 'blogIndex'}}">Blog</a>
           </li>
-          <li><a href="/about">
-            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-            About</a>
+          <li><a href="/about">About</a>
           </li>
-          {{#if currentUser}}
+          {{#if adminAllowed}}
             <li>
-              <a href="{{blogPathFor "blogAdmin"}}">Admin Area</a>
+              <a href="{{blogPathFor 'blogAdmin'}}">Admin Area</a>
             </li>
           {{/if}}
         </ul>

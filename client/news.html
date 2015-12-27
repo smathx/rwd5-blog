@@ -11,9 +11,27 @@
     <div class="row">
       <div class="col-xs-12">
         <h1>News</h1>
-        <p>
-          Lots of news...
-        </p>
+        <ul class="media-list">
+        {{#each news}}
+          <li class="media">
+            <div class="media-left">
+              <a href="{{link}}">
+                <img class="media-object img-thumbnail news-image" 
+                  src="{{image}}">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">{{title}}</h4>
+              <p>
+                <em>{{formatDate pubDate}}</em>
+                &middot;
+                <a href="{{sourceLink}}">{{sourceName}}</a>
+              </p>
+              <p>{{text}}</p>
+            </div>
+          </li>
+          {{/each}}
+        </ul>
       </div>
     </div>
   </div>
