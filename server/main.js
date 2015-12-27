@@ -1,6 +1,7 @@
 /* global News, Scrape */
 
 Meteor.startup(function () {
+  // TODO: Do this every time news page loaded
   News.remove({});
 
   var nasa = Scrape.feed('https://www.nasa.gov/rss/dyn/breaking_news.rss');

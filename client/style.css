@@ -5,7 +5,21 @@ body {
   padding-bottom: 70px;
 }
 
-/* line up admin page title with the other pages */
+.jumbotron {
+  background: red;
+  /* For Safari 5.1 to 6.0 */
+  background: -webkit-linear-gradient(#0D00D4, #76EFFF);
+  /* For Opera 11.1 to 12.0 */
+  background: -o-linear-gradient(#0D00D4, #76EFFF);
+  /* For Firefox 3.6 to 15 */
+  background: -moz-linear-gradient(#0D00D4, #76EFFF);
+  /* Standard syntax */
+  background: linear-gradient(#0D00D4, #76EFFF);
+  background: #2196F3;
+  
+}
+
+/* Line up admin page title with the other pages */
 .meteor-blog-admin {
   padding-top: 0px;
 }
@@ -13,6 +27,8 @@ body {
 .meteor-blog-admin .meteor-blog-admin-index h1 {
   margin-top: 20px;
 }
+
+/* Fix the height of news thumbnails */
 
 .news-image {
   height: 150px;

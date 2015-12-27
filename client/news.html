@@ -23,14 +23,16 @@
             <div class="media-body">
               <h4 class="media-heading">{{title}}</h4>
               <p>
-                <em>{{formatDate pubDate}}</em>
+                <em>
+                  <time datetime="{{pubDate}}">{{formatDate pubDate}}</time>
+                </em>
                 &middot;
                 <a href="{{sourceLink}}">{{sourceName}}</a>
               </p>
               <p>{{text}}</p>
             </div>
           </li>
-          {{/each}}
+        {{/each}}
         </ul>
       </div>
     </div>

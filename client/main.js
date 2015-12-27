@@ -1,10 +1,29 @@
-/* global moment, News */
+/* global Blog, moment, News */
 
 Meteor.subscribe("news");
+//Meteor.subscribe("blog.posts");
+
+Template.home.helpers({
+  latestNews: function () {
+    return News.findOne({}, {
+      sort: [ ['pubDate', 'desc'], ['title', 'asc'] ]
+    });
+  },
+
+  latestPosts: function () {
+    Meteor.subscribe("blog.posts", 3);
+    return Blog.Post.find({}, {
+      sort: [ ['pubDate', 'desc'], ['title', 'asc'] ],
+      limit: 3
+    });
+  }
+});
 
 Template.news.helpers({
   news: function () {
-    return News.find({}, { sort: [[ 'pubDate', 'desc'], [ 'title', 'asc']] });
+    return News.find({}, {
+      sort: [ ['pubDate', 'desc'], ['title', 'asc'] ]
+    });
   }
 });
 

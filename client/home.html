@@ -1,19 +1,80 @@
 <template name="home">
+  
+  <header class="jumbotron">
+    <div class="container">
+      <h1>Space Stuff</h1>
+      <p>
+        A news blog on all things about space &hellip; and stuff
+      </p>
+    </div>
+  </header>
+  
   <div class="container">
-    
+  <!--
     <ol class="breadcrumb">
       <li><span class="glyphicon glyphicon-home active" aria-hidden="true"></span>
         Home
       </li>
     </ol>
-
+  -->
     <div class="row">
-      <div class="col-xs-12">
-        <h1>Home Page</h1>
-        <p>
-          Welcome to our portfolio website.
+      <div class="col-xs-12 col-sm-8">
+        <h2>Latest News</h2>
+        
+        {{#with latestNews}}
+          <div class="media">
+            <div class="media-left">
+              <a href="{{link}}">
+                <img class="media-object img-thumbnail news-image" 
+                  src="{{image}}">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">{{title}}</h4>
+              <p>
+                <em>
+                  <time datetime="{{pubDate}}">{{formatDate pubDate}}</time>
+                </em>
+                &middot;
+                <a href="{{sourceLink}}">{{sourceName}}</a>
+              </p>
+              <p>{{text}}</p>
+            </div>
+          </div>
+        {{else}}
+          <p>Loading news&hellip;</p>
+        {{/with}}
+        
+        <p class="text-right">
+          <a href="/news">More news&hellip;</a>
         </p>
       </div>
+
+      <div class="col-xs-12 col-sm-4">
+        <h2>Latest Posts</h2>
+
+        <ul>
+          {{#each latestPosts}}
+            <li>
+              <a href="{{blogPathFor 'blogShow'}}">
+                <h4>{{{title}}}</h4>
+              </a>
+              <p>
+                <em>
+                  <time datetime="{{publishedAt}}">{{formatDate publishedAt}}</time>
+                </em>
+              </p>
+            </li>
+          {{else}}
+            <li>Loading posts&hellip;</li>
+          {{/each}}
+        </ul>
+        
+        <p class="text-right">
+          <a href="{{blogPathFor 'blogIndex'}}">More posts&hellip;</a>
+        </p>
+      </div>
+      
     </div>
     
   </div>
