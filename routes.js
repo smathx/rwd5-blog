@@ -23,3 +23,7 @@ Router.route('/projects', function () {
 Router.route('/about', function () {
   this.render('about');
 });
+
+Router.route('/admin/blog', function () {
+  this.render('admin');
+});

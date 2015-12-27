@@ -6,11 +6,15 @@
         Home</a>
       </li>
       <li><a href="{{blogPathFor "blogIndex"}}">Blog</a></li>
-      <li class="active">Latest</li>
+      {{#with post}}
+      <li class="active">{{title}}</li>
+      {{/with}}
     </ol>
 
     <div class="row">
-      {{> blogShow }}  
+      <div class="col-xs-12">
+        {{> blogShow }}  
+      </div>
     </div>
   </div>
 </template>
