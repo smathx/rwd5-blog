@@ -5,8 +5,12 @@ body {
   padding-bottom: 70px;
 }
 
+/* Colour jumbotron on landing page */
+/* TODO: find an 'Earthrise' image that fits */
+
 .jumbotron {
-  background: red;
+  /* If all else fails... */
+  background: #2196F3;
   /* For Safari 5.1 to 6.0 */
   background: -webkit-linear-gradient(#0D00D4, #76EFFF);
   /* For Opera 11.1 to 12.0 */
@@ -15,8 +19,6 @@ body {
   background: -moz-linear-gradient(#0D00D4, #76EFFF);
   /* Standard syntax */
   background: linear-gradient(#0D00D4, #76EFFF);
-  background: #2196F3;
-  
 }
 
 /* Line up admin page title with the other pages */
@@ -32,5 +34,12 @@ body {
 
 .news-image {
   height: 150px;
+  margin-right: 20px;
+}
+
+/* Patch RSS button size */
+
+.rss-button {
+  width: 150px;
   margin-right: 20px;
 }
